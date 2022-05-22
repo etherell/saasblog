@@ -14,5 +14,5 @@ test:
 production:
   <<: *default
   database: saasblog_production
-  username: saasblog
-  password: <%= ENV['SAASBLOG_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: postgres
