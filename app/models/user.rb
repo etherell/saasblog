@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   after_create do
     customer = Stripe::Customer.create(email: self.email)
-    update(stripe_customer_id: customer.id)
+    # moved to webhook
+    # update(stripe_customer_id: customer.id)
   end
 end
